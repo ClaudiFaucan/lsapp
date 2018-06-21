@@ -188,7 +188,7 @@ function hideStuff11() {
   
   tabSimulation.push(price);
   console.log(tabSimulation);
-  document.body.style.backgroundImage = "url('../public/ico/backgroundpart2.png')";
+  document.body.style.backgroundImage = "url('../ico/backgroundpart2.png')";
   document.getElementById('q10').style.display = "none";
   document.getElementById('q11').style.display = 'block';
   }
