@@ -12,9 +12,8 @@
 */
 
 
-Route::get('/', 'PagesController@Home' );
 Route::get('/simulator', 'PagesController@Simulator' );
-Route::get('/step1', 'PagesController@Step1' );
+Route::get('/', 'PagesController@Step1' );
 Route::get('/continuer', 'PagesController@Continuer' );
 
 Route::post('store', 'DdpController@store');
