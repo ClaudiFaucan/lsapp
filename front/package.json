@@ -1,0 +1,53 @@
+{
+  "name": "vue-fullpage.js",
+  "version": "0.0.1",
+  "description": "Official Vue.js wrapper for fullPage library",
+  "main": "./src/FullPage.vue",
+  "scripts": {
+    "dev": "webpack-dev-server --config=webpack.config.dev.js",
+    "demo1": "webpack --config=webpack.config.js demos/demo1/src/index.js demos/demo1/dist/build.js",
+    "stand-alone": "concurrently 'webpack --config=webpack.config.build.js src/FullPage.vue demos/stand-alone/build.min.js --output-library=fullPage'  'webpack --config=webpack.config.build.js src/fullPageMixin.js demos/stand-alone/mixin.min.js --output-library=fullPageMixin'",
+    "build": "webpack --config=webpack.config.build.js src/FullPage.vue dist/build.min.js --output-library=fullPage",
+    "mixin": "webpack --config=webpack.config.build.js src/fullPageMixin.js dist/mixin.min.js --output-library=fullPageMixin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alvarotrigo/vue-fullpage.js.git"
+  },
+  "dependencies": {
+    "vue": "^2.5.13",
+    "jquery": ">=1.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^2.30.1",
+    "vue-loader": "^13.7.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2"
+  },
+  "keywords": [
+    "fullPage",
+    "VueJS",
+    "fullpage.js",
+    "vue-fullpage",
+    "vue-fullpage.js",
+    "sections",
+    "slides",
+    "carousel",
+    "scrolling",
+    "snap"
+  ],
+  "bugs": {
+    "url": "https://github.com/alvarotrigo/vue-fullpage.js/issues"
+  },
+  "homepage": "https://github.com/alvarotrigo/vue-fullpage.js",
+  "author": "Alvaro Trigo",
+  "license": "GNU GPL license v3"
+}
