@@ -17,7 +17,7 @@ a:hover {
 }
 </style>
   <nav class="navbar fixed-top navbar-light bg-light">
-    <a class="navbar-brand"  href="http://192.168.0.14/tolmar"><img src="{{ URL::asset('ico/tolmar.png') }}"></a>
+    <a class="navbar-brand"  href="http://tolmar-courtier.fr"><img src="{{ URL::asset('ico/tolmar.png') }}"></a>
  
    
     
