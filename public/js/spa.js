@@ -47,7 +47,7 @@ function hideStuff3($id) {
 
 
   tabSimulation.push($id);
-  console.log(tabSimulation);
+  
 
   document.getElementById('q3').style.display = "none";
   document.getElementById('q6').style.display = 'block';
@@ -63,7 +63,7 @@ function hideStuff4($id) {
   document.getElementById('13').style.display = 'block';
   
   tabSimulation.push($id);
-  console.log(tabSimulation);
+
 
   document.getElementById('q4').style.display = "none";
   document.getElementById('q5').style.display = 'block';
@@ -81,7 +81,7 @@ function hideStuff5($id) {
 
 
   tabSimulation.push($id);
-  console.log(tabSimulation);
+
 
   document.getElementById('q5').style.display = "none";
   document.getElementById('q6').style.display = 'block';
@@ -100,7 +100,7 @@ function hideStuff6($id) {
     
 
     tabSimulation.push($id);
-    console.log(tabSimulation);
+   
     document.getElementById('q6').style.display = "none";
     document.getElementById('q7').style.display = 'block';
 
@@ -116,7 +116,7 @@ function hideStuff61($id) {
     
 
     tabSimulation.push($id);
-    console.log(tabSimulation);
+    
 
     document.getElementById('q6').style.display = "none";
     document.getElementById('q9').style.display = 'block';
@@ -131,7 +131,7 @@ function hideStuff61($id) {
     
     
     tabSimulation.push($id);
-    console.log(tabSimulation);
+
     document.getElementById('q7').style.display = "none";
     document.getElementById('q8').style.display = 'block';
 
@@ -147,7 +147,7 @@ function hideStuff8() {
   document.getElementById('20').style.display = 'block';
   
   tabSimulation.push(rent);
-  console.log(tabSimulation);
+
   document.getElementById('q8').style.display = "none";
     document.getElementById('q9').style.display = 'block';
   }
@@ -167,7 +167,7 @@ function hideStuff9() {
   document.getElementById('21').style.display = 'block';
   
   tabSimulation.push(city);
-  console.log(tabSimulation);
+ 
   document.getElementById('q9').style.display = "none";
     document.getElementById('q10').style.display = 'block';
   }
@@ -187,7 +187,7 @@ function hideStuff11() {
   document.getElementById('23').style.display = 'block';
   
   tabSimulation.push(price);
-  console.log(tabSimulation);
+  
   document.body.style.backgroundImage = "url('../ico/backgroundpart2.png')";
   document.getElementById('q10').style.display = "none";
   document.getElementById('q11').style.display = 'block';
@@ -204,7 +204,7 @@ function hideStuff10seul($id) {
   
   document.getElementById('24').style.display = 'block';
   tabSimulation.push($id);
-  console.log(tabSimulation);
+  
   document.getElementById('q11').style.display = "none";
   document.getElementById('q12').style.display = 'block';
 } 
@@ -215,7 +215,7 @@ function hideStuff10duo($id) {
   
   document.getElementById('24duo').style.display = 'block';
   tabSimulation.push($id);
-  console.log(tabSimulation); 
+  
   document.getElementById('q11').style.display = "none";
   document.getElementById('q12').style.display = 'block';
 
@@ -236,7 +236,7 @@ function hideStuff12() {
   document.getElementById('28').style.display = 'block';
   
   tabSimulation.push(pc);
-  console.log(tabSimulation);
+  
   document.getElementById('q12').style.display = "none";
   document.getElementById('q13').style.display = 'block';
   }
@@ -262,7 +262,7 @@ function hideStuff12duo() {
   document.getElementById('28').style.display = 'block';
 
   tabSimulation.push(duopc);
-  console.log(tabSimulation);
+  
   document.getElementById('q12').style.display = "none";
   document.getElementById('q13').style.display = 'block';
   }
@@ -282,7 +282,7 @@ function hideStuff13($id) {
   
   document.getElementById('33').style.display = 'block';
   tabSimulation.push($id);
-  console.log(tabSimulation); 
+ 
   document.getElementById('q13').style.display = "none";
   document.getElementById('q15').style.display = 'block'; 
 } 
@@ -299,7 +299,7 @@ function hideStuff13prive($id) {
   document.getElementById('31').style.display = 'block';
   document.getElementById('32').style.display = 'block';
   tabSimulation.push($id);
-  console.log(tabSimulation);   
+    
   document.getElementById('q13').style.display = "none";
   document.getElementById('q14').style.display = 'block';
 } 
@@ -315,7 +315,7 @@ function hideStuff14($id) {
   
   document.getElementById('33').style.display = 'block';
   tabSimulation.push($id);
-  console.log(tabSimulation);  
+  
   document.getElementById('q14').style.display = "none";
   document.getElementById('q15').style.display = 'block';
 } 
@@ -335,7 +335,7 @@ function hideStuff15() {
   document.getElementById('28duo').style.display = 'block';
 
   tabSimulation.push(income);
-  console.log(tabSimulation);
+  
    }
    else{
      alert("Veuillez remplir le champs");
@@ -348,7 +348,7 @@ function hideStuff15() {
      document.getElementById('34').style.display = 'block';
     
       tabSimulation.push(income);
-      console.log(tabSimulation);
+      
        }
        else{
          alert("Veuillez remplir le champs");
@@ -372,7 +372,7 @@ function hideStuff13duo($id) {
   
   document.getElementById('33duo').style.display = 'block';
   tabSimulation.push($id);
-  console.log(tabSimulation); 
+  
   document.getElementById('q13duo').style.display = "none";
   document.getElementById('q15duo').style.display = 'block'; 
 } 
@@ -389,7 +389,7 @@ function hideStuff13priveduo($id) {
   document.getElementById('31duo').style.display = 'block';
   document.getElementById('32duo').style.display = 'block';
   tabSimulation.push($id);
-  console.log(tabSimulation);   
+    
   document.getElementById('q13duo').style.display = "none";
   document.getElementById('q14duo').style.display = 'block';
 } 
@@ -405,7 +405,7 @@ function hideStuff14duo($id) {
   
   document.getElementById('33duo').style.display = 'block';
   tabSimulation.push($id);
-  console.log(tabSimulation);  
+   
   document.getElementById('q14duo').style.display = "none";
   document.getElementById('q15duo').style.display = 'block';
 } 
@@ -420,7 +420,7 @@ function hideStuff15duo() {
  document.getElementById('34').style.display = 'block';
 
   tabSimulation.push(incomeDuo);
-  console.log(tabSimulation);
+ 
    }
    else{
      alert("Veuillez remplir le champs");
@@ -447,7 +447,7 @@ function hideStuff16() {
   document.getElementById('35').style.display = 'block';
   
   tabSimulation.push(addincomes);
-  console.log(tabSimulation);
+  
   document.getElementById('q16').style.display = "none";
   document.getElementById('q17').style.display = 'block';
   }else{
@@ -464,7 +464,7 @@ function hideStuff17($id) {
   document.getElementById('35').style.display = 'none';
   document.getElementById('36').style.display = 'block';
   tabSimulation.push(bonus);
-  console.log(tabSimulation);
+  
   document.getElementById('q17').style.display = "none";
   document.getElementById('q18').style.display = 'block';
     }else{
@@ -485,7 +485,7 @@ function hideStuff18() {
   document.getElementById('37').style.display = 'block';
   
   tabSimulation.push(crent);
-  console.log(tabSimulation);
+
   document.getElementById('q18').style.display = "none";
   document.getElementById('q19').style.display = 'block';
   } else{
@@ -501,7 +501,7 @@ function hideStuff19() {
   
   var alimony = document.getElementById('alimony').value;
   tabSimulation.push(alimony);
-  console.log(tabSimulation);
+  
   document.getElementById('q19').style.display = "none";
   document.getElementById('q20').style.display = 'block';
   
@@ -517,7 +517,7 @@ function hideStuff20() {
   
   var credit = document.getElementById('credit').value;
   tabSimulation.push(credit);
-  console.log(tabSimulation);
+
   document.getElementById('q20').style.display = "none";
   
   updateTextInputCapital2(120);
@@ -604,11 +604,9 @@ function hideStuff20() {
   }
     
     var x=0;
-    console.log(tabSimulation[x]);
-    console.log(document.getElementsByName('formprojet').value);
+    
     document.getElementsByName('formprojet').value = tabSimulation[x];x++;
-    console.log(tabSimulation[x]);
-    console.log(document.getElementsByName('formprojet').value);
+   
     document.getElementsByName('formtype_logement').value = tabSimulation[x];x++;
     document.getElementsByName('formetat').value = tabSimulation[x];x++;
     document.getElementsByName('formtravaux').value = tabSimulation[x];x++;
