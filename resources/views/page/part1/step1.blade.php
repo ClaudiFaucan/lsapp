@@ -397,6 +397,9 @@
     padding-top: 0px;
 }
 
+.bodyContainer{
+    padding-top: 10%;
+}
 
 </style>
 
@@ -405,7 +408,7 @@
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lsapp.css') }}">
 <script type="text/javascript" src="{{ URL::asset('js/spa.js') }}"></script>
 
-<!-- <script type="text/javascript" src="{ { URL::asset('../front/src/index.js') }}"></script> -->
+<div class="bodyContainer">
 
 <div id="q2" class="question">
     <h1> Où en etes vous dans votre projet immobilier ?</h1>
@@ -1277,7 +1280,7 @@
 
 </div>
 
-
+</div>
 
 <div id="blocSimulateur">
     <div id="mensu">
