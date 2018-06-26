@@ -398,7 +398,7 @@
 }
 
 .bodyContainer{
-    padding-top: 10%;
+    padding-top: 100px;
 }
 
 </style>
