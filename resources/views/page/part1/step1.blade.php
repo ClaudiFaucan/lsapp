@@ -1336,7 +1336,7 @@
             </div>
         </section>
             <br>
-        <h3>Vous allez économiser  <span id="economize"> </span></h3>
+        <h3>Vous pouvez économiser  <span id="economize"> </span></h3>
 
         
         <br><br>
