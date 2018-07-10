@@ -22,10 +22,16 @@
   }
   
   h1 {
-    font-size: 1.75rem;
+    font-size: 4rem;
+    color: #292929;
     margin: 0 0 0.75rem 0;
+    font-weight: bold;
   }
   
+  .filAriane{
+    text-align: left;
+    color: #292929;
+  }
   /* Pattern styles */
   .left-half {
     background-color: #ffffff;

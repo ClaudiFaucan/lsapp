@@ -187,8 +187,8 @@ function hideStuff11() {
   document.getElementById('23').style.display = 'block';
   
   tabSimulation.push(price);
+  console.log(tabSimulation);
   
-  document.body.style.backgroundImage = "url('../ico/backgroundpart2.png')";
   document.getElementById('q10').style.display = "none";
   document.getElementById('q11').style.display = 'block';
   }
@@ -512,8 +512,7 @@ function hideStuff20() {
 
   document.getElementById('38').style.display = 'none';
   document.getElementById('blocSimulateur').style.display = 'block';
-  document.body.style.backgroundImage = "url('')";
-  document.body.style.backgroundColor = "#efefef";
+ 
   
   var credit = document.getElementById('credit').value;
   tabSimulation.push(credit);
@@ -990,9 +989,9 @@ function updateTextInputCapital2(val) {
         document.getElementById('MensualiteNationalSpan').innerHTML=totalToSNational+"€";
         document.getElementById('totalInterestNationalSpan').innerHTML=totalInterestNational+"€";
 
+
         document.getElementById('economize').innerHTML=Math.round(saveUp,1) +"€";
 }
-
 
 
 

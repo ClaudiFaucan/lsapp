@@ -9,6 +9,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+<script>
+    window.intercomSettings = {
+      app_id: "gmvzxcui"
+    };
+   </script>
+   <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/gmvzxcui';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+
+
 <style>
 
     .h2, h2 {
@@ -156,13 +164,15 @@
     background-size:  100%;
     margin-top: 5%;
     font-family: 'Barlow';
+    background-attachment: fixed;
+    background-position: bottom right; 
     
     }
 
     .icochoice {
         height: 100%;
         width: 100%;
-        opacity: 0.9;
+        opacity: 0.7;
         
     }
 
@@ -293,19 +303,19 @@
     input.questionInput:valid + label > span {
     top: -100px;
     font-size: 22px;
-    color: #adadad;
+    color: #292929;
     }
 
     textarea.questionInput:focus + label > span,
     textarea.questionInput:valid + label > span {
     top: -150px;
     font-size: 22px;
-    color: #adadad;
+    color: #292929;
     }
 
     input.questionInput:valid + label,
     textarea.questionInput:valid + label {
-    border-color: green;
+    border-color: #fd1742;
     }
 
     input.questionInput:invalid,
@@ -318,7 +328,7 @@
     font-weight: 300;
     margin: 0;
     position: absolute;
-    color: white;
+    color: #292929;
     font-size: 48px;
     top: -66px;
     left: 0px;
@@ -401,54 +411,63 @@
     padding-top: 100px;
 }
 
+.checkedbutton{
+    opacity: 0.7;
+}
+.checkedbutton:hover{
+    opacity: 1;
+}
+
 </style>
 
 
 
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lsapp.css') }}">
 <script type="text/javascript" src="{{ URL::asset('js/spa.js') }}"></script>
-
 <div class="bodyContainer">
 
-<div id="q2" class="question">
-    <h1> Où en etes vous dans votre projet immobilier ?</h1>
-</div>
-
-<div class="row ">
-    <div class="column colcentered"></div>
-    <div id="1" class="column colcentered">
-        <a href="#"  onclick="hideStuff('Demande de Renseignements');">
-        <img class="icochoice" src="{{ URL::asset('ico/information.png') }}"> 
-        </a>
+<div>
+    <div id="q2" class="question">
+        <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4> 
+        <h1> Où en etes vous dans votre projet immobilier ?</h1>
     </div>
 
-    <div id="2" class="column colcentered">
-        <a href="#"  onclick="hideStuff('Signature compromis');">
-        <img class="icochoice" src="{{ URL::asset('ico/contract.png') }}"> 
-        </a>
-    </div>
-    <div class="column colcentered"></div>
-</div>
-<div class="row">
+    <div class="row ">
         <div class="column colcentered"></div>
-    <div id="3" class="column colcentered">
-        <a href="#"  onclick="hideStuff('Act Signé');">
-        <img class="icochoice" src="{{ URL::asset('ico/stamp.png') }}"> 
-        </a>
+        <div id="1" class="column colcentered">
+            <a href="#"  onclick="hideStuff('Demande de Renseignements');">
+            <img class="icochoice" src="{{ URL::asset('ico/information.png') }}"> 
+            </a>
+        </div>
+
+        <div id="2" class="column colcentered">
+            <a href="#"  onclick="hideStuff('Signature compromis');">
+            <img class="icochoice" src="{{ URL::asset('ico/contract.png') }}"> 
+            </a>
+        </div>
+        <div class="column colcentered"></div>
     </div>
+    <div class="row">
+            <div class="column colcentered"></div>
+        <div id="3" class="column colcentered">
+            <a href="#"  onclick="hideStuff('Act Signé');">
+            <img class="icochoice" src="{{ URL::asset('ico/stamp.png') }}"> 
+            </a>
+        </div>
 
-    <div id="4" class="column colcentered">
-        <a href="#" onclick="hideStuff('En Recherche');">
-        <img class="icochoice" src="{{ URL::asset('ico/search.png') }}"> 
-        </a>
+        <div id="4" class="column colcentered">
+            <a href="#" onclick="hideStuff('En Recherche');">
+            <img class="icochoice" src="{{ URL::asset('ico/search.png') }}"> 
+            </a>
+        </div>
+        <div class="column colcentered"></div>
+
+
     </div>
-    <div class="column colcentered"></div>
-
-
 </div>
- 
 <div id="q3" class="question">
-        <h1> Il s'agit...</h1>
+       <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4> 
+       <h1> Il s'agit...</h1>
     </div>
 <div class="row">
         <div class="column colcentered"></div>
@@ -491,7 +510,8 @@
 </div>
 
 <div id="q4" class="question">
-        <h1> Génial, c'est un beau projet! votre bien est-il ...</h1>
+       <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4> 
+       <h1> Génial, c'est un beau projet! votre bien est-il ...</h1>
     </div>
 
 <div class="row">
@@ -527,8 +547,9 @@
 
 </div>
 
-<div class="question">
-        <h1  id="q5"> Vous devez...</h1>
+<div class="question" id="q5">
+        <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4>
+        <h1  > Vous devez...</h1>
     </div>
 <div class="row">
         <div class="column colcentered"></div>
@@ -558,8 +579,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q6"> Ce bien sera votre...</h1>
+<div class="question" id="q6">
+        <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4>
+        <h1> Ce bien sera votre...</h1>
     </div>
 <div class="row">
         <div class="column colcentered"></div>
@@ -594,8 +616,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q7"> Qui sera...</h1>
+<div class="question" id="q7">
+        <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4>
+        <h1> Qui sera...</h1>
     </div>
 <div class="row">
         <div class="column colcentered"></div>
@@ -624,8 +647,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q8"> pour laquelle vous espérez un loyer de...</h1>
+<div class="question"   id="q8">
+        <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4>
+        <h1> pour laquelle vous espérez un loyer de...</h1>
     </div>
 
 <div class="row">
@@ -641,8 +665,8 @@
                
              
             
-            <a href="#" onclick="hideStuff8();">
-            <img src="{{ URL::asset('ico/checked.png') }}">
+            <a href="#" onclick="hideStuff8();" id="clickexpectedrent">
+            <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
             </a>
         </div>    
 
@@ -658,8 +682,9 @@
 
 </div>
 
-<div class="question">
-        <h1  id="q9"> </h1>
+<div class="question" id="q9">
+        <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4>
+        <h1  >Dans la commune de... </h1>
     </div>
 
 <div class="row">
@@ -667,14 +692,15 @@
     <div id="20" class="column colcentered centerInput">
         <form>
                 <input type="text" name="name" class="questionInput" id="city" required autocomplete="off" />
-                <label for="nme"><span>Dans la commune de...</span></label>
+                <label for="nme"><span>Commune...</span></label>
                 
         </form>
         
     
         
         <a href="#" onclick="hideStuff9();">
-        <img src="{{ URL::asset('ico/checked.png') }}">
+        <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
+        
         </a>
     </div>    
 
@@ -695,8 +721,9 @@
 
 
 
-<div class="question">
-        <h1  id="q10">Vous souhaitez demander un pret pour un bien dont le prix s'éleve à... </h1>
+<div class="question" id="q10">
+        <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4>
+        <h1  >Vous souhaitez demander un pret pour un bien dont le prix s'éleve à... </h1>
     </div>
 <div class="row">
    
@@ -709,8 +736,8 @@
 
     
        
-        <a href="#" onclick="hideStuff11();">
-        <img src="{{ URL::asset('ico/checked.png') }}">
+        <a href="#" onclick="hideStuff11();" id="clickprice">
+        <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
         </a>
     </div>    
 
@@ -726,8 +753,9 @@
 
 </div>
 
-<div class="question">
-        <h1  id="q11"> Parlez-nous de vous! vous êtes...</h1>
+<div id="q11" class="question">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1  > Parlez-nous de vous! vous êtes...</h1>
     </div>
 
 <div class="row">
@@ -757,8 +785,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q12"> Pour financer votre projet vous disposez d'un apport personnel de...</h1>
+<div class="question" id="q12">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1  > Pour financer votre projet vous disposez d'un apport personnel de...</h1>
     </div>
 <div class="row">
    
@@ -772,8 +801,8 @@
                     
             </form> 
         
-        <a href="#" onclick="hideStuff12();">
-        <img src="{{ URL::asset('ico/checked.png') }}">
+        <a href="#" onclick="hideStuff12();" id="clickpersonalcontribution">
+        <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
         </a>
     </div>    
 
@@ -805,8 +834,8 @@
                     
             </form> 
         
-        <a href="#" onclick="hideStuff12duo();">
-        <img src="{{ URL::asset('ico/checked.png') }}">
+        <a href="#" onclick="hideStuff12duo();" id="clickduopc">
+        <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
         </a>
     </div>    
 
@@ -822,8 +851,9 @@
 
 
 
-<div class="question">
-        <h1  id="q13"> Dans la vie professionnelle, vous travaillez dans le secteur...</h1>
+<div class="question" id="q13">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1  > Dans la vie professionnelle, vous travaillez dans le secteur...</h1>
     </div>
 <div class="row">
 
@@ -871,8 +901,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q14"> Dans le secteur privé, vous êtes en...</h1>
+<div class="question" id="q14">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1  > Dans le secteur privé, vous êtes en...</h1>
     </div>
 
 
@@ -918,8 +949,9 @@
 
 </div>
 
-<div class="question">
-        <h1  id="q15"> Vos revenus mensuels s'élèvent à...</h1>
+<div class="question" id="q15">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1  > Vos revenus mensuels s'élèvent à...</h1>
     </div>
 
 <div class="row">
@@ -933,8 +965,8 @@
                 
         </form> 
        
-       <a href="#" onclick="hideStuff15();">
-       <img src="{{ URL::asset('ico/checked.png') }}">
+       <a href="#" onclick="hideStuff15();" id="clickincome">
+       <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
        </a>
    </div>    
 
@@ -963,8 +995,9 @@
 
 
 
-<div class="question">
-    <h1  id="q13duo"> Dans la vie professionnelle, votre co-emprunteur travaille dans le secteur...</h1>
+<div class="question"  id="q13duo">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+    <h1 > Dans la vie professionnelle, votre co-emprunteur travaille dans le secteur...</h1>
 </div>
 <div class="row">
 
@@ -1012,8 +1045,9 @@
 </div>
 
 
-<div class="question">
-    <h1  id="q14duo"> Dans le secteur privé, il/elle est en...</h1>
+<div class="question"  id="q14duo">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+    <h1 > Dans le secteur privé, il/elle est en...</h1>
 </div>
 
 
@@ -1059,8 +1093,9 @@
 
 </div>
 
-<div class="question">
-    <h1  id="q15duo"> Ses revenus mensuels s'élèvent à...</h1>
+<div class="question"  id="q15duo">
+    <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+    <h1 > Ses revenus mensuels s'élèvent à...</h1>
 </div>
 
 <div class="row">
@@ -1074,8 +1109,8 @@
             
     </form> 
    
-   <a href="#" onclick="hideStuff15duo();">
-   <img src="{{ URL::asset('ico/checked.png') }}">
+   <a href="#" onclick="hideStuff15duo();" id="clickincomeDuo">
+   <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
    </a>
 </div>    
 
@@ -1109,8 +1144,9 @@
 
 
 
-<div class="question">
-        <h1  id="q16"> Percevez-vous des revenus complémentaires?...</h1>
+<div class="question"  id="q16">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1 > Percevez-vous des revenus complémentaires?...</h1>
     </div>
 
 <div class="row">
@@ -1124,8 +1160,8 @@
                 
         </form> 
        
-       <a href="#" onclick="hideStuff16();">
-       <img src="{{ URL::asset('ico/checked.png') }}">
+       <a href="#" onclick="hideStuff16();" id="clickaddincomes">
+       <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
        </a>
    </div>    
 
@@ -1143,8 +1179,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q17"> Vos primes annuelles s'élèvent à...</h1>
+<div class="question"  id="q17">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1 > Vos primes annuelles s'élèvent à...</h1>
     </div>
 
 
@@ -1159,8 +1196,8 @@
                 
         </form> 
        
-       <a href="#" onclick="hideStuff17();">
-       <img src="{{ URL::asset('ico/checked.png') }}">
+       <a href="#" onclick="hideStuff17();" id="clickbonus">
+       <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
        </a>
    </div>    
 
@@ -1178,8 +1215,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q18"> Votre loyer mensuel actuel est de...</h1>
+<div class="question" id="q18">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1> Votre loyer mensuel actuel est de...</h1>
     </div>
 <div class="row">
    
@@ -1193,8 +1231,8 @@
         </form> 
        
        
-       <a href="#" onclick="hideStuff18();">
-       <img src="{{ URL::asset('ico/checked.png') }}">
+       <a href="#" onclick="hideStuff18();" id="clickcurrentrent">
+       <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
        </a>
    </div>    
 
@@ -1212,8 +1250,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q19"> Versez-vous une pension alimentaire ?</h1>
+<div class="question" id="q19">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1  > Versez-vous une pension alimentaire ?</h1>
     </div>
 
 <div class="row">
@@ -1227,8 +1266,8 @@
                 
         </form> 
       
-       <a href="#" onclick="hideStuff19();">
-       <img src="{{ URL::asset('ico/checked.png') }}">
+       <a href="#" onclick="hideStuff19();" id="clickalimony">
+       <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
        </a>
    </div>    
 
@@ -1246,8 +1285,9 @@
 </div>
 
 
-<div class="question">
-        <h1  id="q20"> Le montant de vos crédits en cours s'élève à...</h1>
+<div class="question"  id="q20">
+        <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+        <h1 > Le montant de vos crédits en cours s'élève à...</h1>
     </div>
 
 <div class="row">
@@ -1261,8 +1301,8 @@
                 
         </form> 
        
-       <a href="#" onclick="hideStuff20();">
-       <img src="{{ URL::asset('ico/checked.png') }}">
+       <a href="#" onclick="hideStuff20();" id="clickcredit">
+       <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
        </a>
    </div>    
 
@@ -1285,7 +1325,7 @@
 <div id="blocSimulateur">
     <div id="mensu">
             <a name="etape3"/>
-    
+            <h4 class="filAriane">Etape 3/3 - Résultats de votre simulation</h4> 
             <h2>Vous avez renseigné les différentes étapes de votre projet, la simulation touche à sa fin.
                 Voici le taux que nous vous proposons :</h2>
     
@@ -1521,8 +1561,75 @@
     
             
     window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
-    window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='number'){e.preventDefault();return false;}}},true);
+    window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='number'){e.preventDefault();
+        console.log(e.target.id);
+        switch (e.target.id){
 
+            case (e.target.id ="expectedrent") :
+            document.getElementById('clickexpectedrent').click();
+            console.log(e.target.id);
+            break;
+
+            
+            case (e.target.id ="personalcontribution") :
+            document.getElementById('clickpersonalcontribution').click();
+            console.log(e.target.id);
+            break;
+
+            case (e.target.id ="price") :
+            document.getElementById('clickprice').click();
+            console.log(e.target.id);
+            break;
+
+            case (e.target.id ="duopc") :
+            document.getElementById('clickduopc').click();
+            console.log(e.target.id);
+            break;
+
+            case (e.target.id ="incomeDuo") :
+            document.getElementById('clickincomeDuo').click();
+            console.log(e.target.id);
+            break;
+
+            case (e.target.id ="income") :
+            document.getElementById('clickincome').click();
+            console.log(e.target.id);
+            break;
+            
+
+            case (e.target.id ="addincomes") :
+            document.getElementById('clickaddincomes').click();
+            console.log(e.target.id);
+            break;
+
+            case (e.target.id ="clickbonus") :
+            document.getElementById('clickbonus').click();
+            console.log(e.target.id);
+            break;
+
+            case (e.target.id ="alimony") :
+            document.getElementById('clickalimony').click();
+            console.log(e.target.id);
+            break;
+            
+            case (e.target.id ="currentrent") :
+            document.getElementById('clickcurrentrent').click();
+            console.log(e.target.id);
+            break;
+
+            case (e.target.id ="credit") :
+            document.getElementById('clickcredit').click();
+            console.log(e.target.id);
+            break;
+
+            default:
+
+            break;
+            
+
+        }
+    
+    }}},true);
     
 </script>
 
