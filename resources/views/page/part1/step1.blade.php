@@ -418,6 +418,21 @@
     opacity: 1;
 }
 
+
+.boxInput{
+    border: none;
+    box-shadow: 7px 14px 50px #ddd;
+    height: 70px;
+    width: 400px;
+    font-size: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+::placeholder { 
+    color: #292929;
+    opacity: 0.3;
+}
 </style>
 
 
@@ -429,7 +444,7 @@
 <div>
     <div id="q2" class="question">
         <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4> 
-        <h1> Où en etes vous dans votre projet immobilier ?</h1>
+        <h1> Où en êtes-vous dans votre projet immobilier ?</h1>
     </div>
 
     <div class="row ">
@@ -511,7 +526,7 @@
 
 <div id="q4" class="question">
        <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4> 
-       <h1> Génial, c'est un beau projet! votre bien est-il ...</h1>
+       <h1> Génial, c'est un beau projet ! Votre bien est-il ...</h1>
     </div>
 
 <div class="row">
@@ -649,7 +664,7 @@
 
 <div class="question"   id="q8">
         <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4>
-        <h1> pour laquelle vous espérez un loyer de...</h1>
+        <h1> Pour laquelle vous espérez un loyer de...</h1>
     </div>
 
 <div class="row">
@@ -658,8 +673,8 @@
         
         <div id="19" class="column colcentered">
                 <form>
-                        <input id="expectedrent" type="number" name="name" class="questionInput" required autocomplete="off" />
-                        <label for="nme"><span>Loyer Attendu...</span></label>
+                        <input id="expectedrent" type="number" name="name" class="boxInput" required autocomplete="off" placeholder="Ex : 900€" />
+                        
                         
                 </form> 
                
@@ -691,8 +706,8 @@
    
     <div id="20" class="column colcentered centerInput">
         <form>
-                <input type="text" name="name" class="questionInput" id="city" required autocomplete="off" />
-                <label for="nme"><span>Commune...</span></label>
+                <input class="boxInput" type="text" name="name"  id="city" required autocomplete="off" placeholder="Ex : Bordeaux" />
+                
                 
         </form>
         
@@ -723,14 +738,14 @@
 
 <div class="question" id="q10">
         <h4 class="filAriane">Etape 1/3 - Renseignez votre projet</h4>
-        <h1  >Vous souhaitez demander un pret pour un bien dont le prix s'éleve à... </h1>
+        <h1  >Vous souhaitez demander un prêt pour un bien dont le prix s'élève à... </h1>
     </div>
 <div class="row">
    
     <div id="21" class="column colcentered centerInput">
         <form>
-            <input id="price" type="number" name="name" class="questionInput" required autocomplete="off" />
-            <label for="nme"><span>Prix du bien...</span></label>
+            <input id="price" type="number" name="name" class="boxInput"  required autocomplete="off" />
+            
             
         </form>    
 
@@ -755,7 +770,7 @@
 
 <div id="q11" class="question">
         <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
-        <h1  > Parlez-nous de vous! vous êtes...</h1>
+        <h1  > Parlez-nous de vous! Vous êtes...</h1>
     </div>
 
 <div class="row">
@@ -796,8 +811,8 @@
     
     <div id="24" class="column colcentered centerInput">
             <form>
-                    <input id="personalcontribution" type="number" name="name" class="questionInput" required autocomplete="off" />
-                    <label for="nme"><span>Montant de l'apport...</span></label>
+                    <input id="personalcontribution" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                    
                     
             </form> 
         
@@ -829,8 +844,8 @@
     <div id="24duo" class="column colcentered centerInput">
 
             <form>
-                    <input id="duopc" type="number" name="name" class="questionInput" required autocomplete="off" />
-                    <label for="nme"><span>Montant des apports...</span></label>
+                    <input id="duopc" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                    
                     
             </form> 
         
@@ -960,8 +975,8 @@
         
    <div id="33" class="column colcentered centerInput">
         <form>
-                <input id="income" type="number" name="name" class="questionInput" required autocomplete="off" />
-                <label for="nme"><span>Revenus Net Mensuels...</span></label>
+                <input id="income" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                
                 
         </form> 
        
@@ -1104,8 +1119,8 @@
     
 <div id="33duo" class="column colcentered centerInput">
     <form>
-            <input id="incomeDuo" type="number" name="name" class="questionInput" required autocomplete="off" />
-            <label for="nme"><span>Revenus Net Mensuels...</span></label>
+            <input id="incomeDuo" type="number" name="name" class="boxInput"  required autocomplete="off" />
+            
             
     </form> 
    
@@ -1141,12 +1156,42 @@
 
 
 
+<div class="question" id="q16bis">
+    <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+    <h1 > Percevez-vous des revenus additionnels ? </h1>
+</div>
+<div class="row">
+    <div class="column colcentered"></div>
+<div id="revenuadd" class="column colcentered">
+        
+    <a href="#" onclick="hideStuff16bis();">
+    <img class="icochoice" src="{{ URL::asset('ico/revenuadd.png') }}"> 
+    </a>
+</div>
+
+<div id="norevenuadd" class="column colcentered">
+    <a href="#" onclick="hideStuff16bisno();">
+    <img class="icochoice" src="{{ URL::asset('ico/norevenuadd.png') }}"> 
+    </a>
+</div>
+<div class="column colcentered"></div>
+
+
+<script type="text/javascript">
+        document.getElementById('revenuadd').style.display = 'none';
+        document.getElementById('norevenuadd').style.display = 'none';
+        
+        
+    </script>
+
+
+</div>
 
 
 
 <div class="question"  id="q16">
         <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
-        <h1 > Percevez-vous des revenus complémentaires?...</h1>
+        <h1 > A combien s'élèvent vos revenus additionnels ?</h1>
     </div>
 
 <div class="row">
@@ -1155,8 +1200,8 @@
         
    <div id="34" class="column colcentered centerInput">
         <form>
-                <input id="addincomes" type="number" name="name" class="questionInput" required autocomplete="off" />
-                <label for="nme"><span>Revenus Additionnels...</span></label>
+                <input id="addincomes" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                
                 
         </form> 
        
@@ -1179,6 +1224,41 @@
 </div>
 
 
+
+
+<div class="question" id="q17bis">
+    <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+    <h1 > Percevez-vous des primes annuelles ?</h1>
+</div>
+<div class="row">
+    <div class="column colcentered"></div>
+<div id="primes" class="column colcentered">
+        
+    <a href="#" onclick="hideStuff17bis();">
+    <img class="icochoice" src="{{ URL::asset('ico/primes.png') }}"> 
+    </a>
+</div>
+
+<div id="noprimes" class="column colcentered">
+    <a href="#" onclick="hideStuff17bisno();">
+    <img class="icochoice" src="{{ URL::asset('ico/noprimes.png') }}"> 
+    </a>
+</div>
+<div class="column colcentered"></div>
+
+
+<script type="text/javascript">
+        document.getElementById('primes').style.display = 'none';
+        document.getElementById('noprimes').style.display = 'none';
+        
+        
+    </script>
+
+
+</div>
+
+
+
 <div class="question"  id="q17">
         <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
         <h1 > Vos primes annuelles s'élèvent à...</h1>
@@ -1191,8 +1271,8 @@
         
    <div id="35" class="column colcentered centerInput">
         <form>
-                <input id="bonus" type="number" name="name" class="questionInput" required autocomplete="off" />
-                <label for="nme"><span>Primes Additionnelles...</span></label>
+                <input id="bonus" type="number" name="name" class="boxInput" required autocomplete="off" />
+                
                 
         </form> 
        
@@ -1215,6 +1295,40 @@
 </div>
 
 
+
+<div class="question" id="q18bis">
+    <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+    <h1 > Payez-vous un loyer mensuel ?</h1>
+</div>
+<div class="row">
+    <div class="column colcentered"></div>
+<div id="loyer" class="column colcentered">
+        
+    <a href="#" onclick="hideStuff18bis();">
+    <img class="icochoice" src="{{ URL::asset('ico/loyer.png') }}"> 
+    </a>
+</div>
+
+<div id="noloyer" class="column colcentered">
+    <a href="#" onclick="hideStuff18bisno();">
+    <img class="icochoice" src="{{ URL::asset('ico/noloyer.png') }}"> 
+    </a>
+</div>
+<div class="column colcentered"></div>
+
+
+<script type="text/javascript">
+        document.getElementById('loyer').style.display = 'none';
+        document.getElementById('noloyer').style.display = 'none';
+        
+        
+    </script>
+
+
+</div>
+
+
+
 <div class="question" id="q18">
         <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
         <h1> Votre loyer mensuel actuel est de...</h1>
@@ -1225,8 +1339,8 @@
         
    <div id="36" class="column colcentered centerInput">
         <form>
-                <input id="currentrent" type="number" name="name" class="questionInput" required autocomplete="off" />
-                <label for="nme"><span>Loyer mensuel actuel...</span></label>
+                <input id="currentrent" type="number" name="name" class="boxInput" required autocomplete="off" />
+                
                 
         </form> 
        
@@ -1250,9 +1364,45 @@
 </div>
 
 
+
+
+<div class="question" id="q19bis">
+    <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+    <h1 > Versez-vous une pension alimentaire ?</h1>
+</div>
+<div class="row">
+    <div class="column colcentered"></div>
+<div id="pension" class="column colcentered">
+        
+    <a href="#" onclick="hideStuff19bis();">
+    <img class="icochoice" src="{{ URL::asset('ico/pension.png') }}"> 
+    </a>
+</div>
+
+<div id="nopension" class="column colcentered">
+    <a href="#" onclick="hideStuff19bisno();">
+    <img class="icochoice" src="{{ URL::asset('ico/nopension.png') }}"> 
+    </a>
+</div>
+<div class="column colcentered"></div>
+
+
+<script type="text/javascript">
+        document.getElementById('pension').style.display = 'none';
+        document.getElementById('nopension').style.display = 'none';
+        
+        
+    </script>
+
+
+</div>
+
+
+
+
 <div class="question" id="q19">
         <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
-        <h1  > Versez-vous une pension alimentaire ?</h1>
+        <h1  > Votre pension alimentaire s'élève à ...</h1>
     </div>
 
 <div class="row">
@@ -1261,8 +1411,8 @@
         
    <div id="37" class="column colcentered centerInput">
         <form>
-                <input id="alimony" type="number" name="name" class="questionInput" required autocomplete="off" />
-                <label for="nme"><span>Montant mensuel pension alimentaire...</span></label>
+                <input id="alimony" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                
                 
         </form> 
       
@@ -1285,6 +1435,41 @@
 </div>
 
 
+
+<div class="question" id="q20bis">
+    <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
+    <h1 > Le montant de vos crédits en cours s'élève à...</h1>
+</div>
+<div class="row">
+    <div class="column colcentered"></div>
+<div id="credits" class="column colcentered">
+        
+    <a href="#" onclick="hideStuff20bis();">
+    <img class="icochoice" src="{{ URL::asset('ico/credits.png') }}"> 
+    </a>
+</div>
+
+<div id="nocredits" class="column colcentered">
+    <a href="#" onclick="hideStuff20bisno();">
+    <img class="icochoice" src="{{ URL::asset('ico/nocredits.png') }}"> 
+    </a>
+</div>
+<div class="column colcentered"></div>
+
+
+<script type="text/javascript">
+        document.getElementById('credits').style.display = 'none';
+        document.getElementById('nocredits').style.display = 'none';
+        
+        
+    </script>
+
+
+</div>
+
+
+
+
 <div class="question"  id="q20">
         <h4 class="filAriane">Etape 2/3 - Votre financement</h4> 
         <h1 > Le montant de vos crédits en cours s'élève à...</h1>
@@ -1296,8 +1481,8 @@
         
    <div id="38" class="column colcentered centerInput">
         <form>
-                <input id="credit" type="number" name="name" class="questionInput" required autocomplete="off" />
-                <label for="nme"><span>Montant mensuel crédits en cours...</span></label>
+                <input id="credit" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                
                 
         </form> 
        
@@ -1553,10 +1738,15 @@
     document.getElementById('q13duo').style.display = 'none';
     document.getElementById('q14duo').style.display = 'none';
     document.getElementById('q15duo').style.display = 'none';
+    document.getElementById('q16bis').style.display = 'none';
     document.getElementById('q16').style.display = 'none';
+    document.getElementById('q17bis').style.display = 'none';
     document.getElementById('q17').style.display = 'none';
+    document.getElementById('q18bis').style.display = 'none';
     document.getElementById('q18').style.display = 'none';
+    document.getElementById('q19bis').style.display = 'none';
     document.getElementById('q19').style.display = 'none';
+    document.getElementById('q20bis').style.display = 'none';
     document.getElementById('q20').style.display = 'none';
     
             

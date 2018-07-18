@@ -345,7 +345,8 @@ function hideStuff15() {
   } else{
     if (income){
       document.getElementById('33').style.display = 'none';
-     document.getElementById('34').style.display = 'block';
+      document.getElementById('revenuadd').style.display = 'block';
+      document.getElementById('norevenuadd').style.display = 'block';
     
       tabSimulation.push(income);
       
@@ -354,7 +355,7 @@ function hideStuff15() {
          alert("Veuillez remplir le champs");
        }
       document.getElementById('q15').style.display = "none";
-      document.getElementById('q16').style.display = 'block';
+      document.getElementById('q16bis').style.display = 'block';
   }
 }  
 
@@ -417,8 +418,8 @@ function hideStuff15duo() {
   
    if (incomeDuo){
   document.getElementById('33duo').style.display = 'none';
- document.getElementById('34').style.display = 'block';
-
+ document.getElementById('revenuadd').style.display = 'block';
+ document.getElementById('norevenuadd').style.display = 'block';
   tabSimulation.push(incomeDuo);
  
    }
@@ -426,7 +427,7 @@ function hideStuff15duo() {
      alert("Veuillez remplir le champs");
    }
   document.getElementById('q15duo').style.display = "none";
-  document.getElementById('q16').style.display = 'block';
+  document.getElementById('q16bis').style.display = 'block';
 } 
 
 
@@ -438,21 +439,89 @@ function hideStuff15duo() {
 
 
 
+function hideStuff16bis() {
+  
+
+  
+  document.getElementById('revenuadd').style.display = 'none';
+  document.getElementById('norevenuadd').style.display = 'none';
+  document.getElementById('34').style.display = 'block';
+  
+  
+  
+  document.getElementById('q16bis').style.display = 'none';
+  document.getElementById('q16').style.display = 'block';
+  
+ 
+}  
+
+
+function hideStuff16bisno() {
+  var addincomes = 0;
+
+  
+    document.getElementById('revenuadd').style.display = 'none';
+    document.getElementById('norevenuadd').style.display = 'none';
+    document.getElementById('primes').style.display = 'block';
+    document.getElementById('noprimes').style.display = 'block';
+  
+  tabSimulation.push(addincomes);
+  
+  document.getElementById('q16bis').style.display = "none";
+  document.getElementById('q17bis').style.display = 'block';
+  
+ 
+}  
 
 function hideStuff16() {
   var addincomes = document.getElementById('addincomes').value;
 
   if(addincomes){
   document.getElementById('34').style.display = 'none';
-  document.getElementById('35').style.display = 'block';
+  document.getElementById('primes').style.display = 'block';
+    document.getElementById('noprimes').style.display = 'block';
   
   tabSimulation.push(addincomes);
   
   document.getElementById('q16').style.display = "none";
-  document.getElementById('q17').style.display = 'block';
+  document.getElementById('q17bis').style.display = 'block';
   }else{
     alert("Veuillez remplir le champs");
   }
+ 
+}  
+
+function hideStuff17bis() {
+  
+
+  
+  document.getElementById('primes').style.display = 'none';
+  document.getElementById('noprimes').style.display = 'none';
+  document.getElementById('35').style.display = 'block';
+  
+  
+  
+  document.getElementById('q17bis').style.display = 'none';
+  document.getElementById('q17').style.display = 'block';
+  
+ 
+}  
+
+
+function hideStuff17bisno() {
+  var bonus = 0;
+
+  
+    document.getElementById('primes').style.display = 'none';
+    document.getElementById('noprimes').style.display = 'none';
+    document.getElementById('loyer').style.display = 'block';
+  document.getElementById('noloyer').style.display = 'block';
+  
+  tabSimulation.push(bonus);
+  
+  document.getElementById('q17bis').style.display = "none";
+  document.getElementById('q18bis').style.display = 'block';
+  
  
 }  
 
@@ -462,17 +531,52 @@ function hideStuff17($id) {
 
   if(bonus){
   document.getElementById('35').style.display = 'none';
-  document.getElementById('36').style.display = 'block';
+  document.getElementById('loyer').style.display = 'block';
+  document.getElementById('noloyer').style.display = 'block';
   tabSimulation.push(bonus);
   
   document.getElementById('q17').style.display = "none";
-  document.getElementById('q18').style.display = 'block';
+  document.getElementById('q18bis').style.display = 'block';
     }else{
     alert("Veuillez remplir le champs");
   }
  
 }  
 
+
+function hideStuff18bis() {
+  
+
+  
+  document.getElementById('loyer').style.display = 'none';
+  document.getElementById('noloyer').style.display = 'none';
+  document.getElementById('36').style.display = 'block';
+  
+  
+  
+  document.getElementById('q18bis').style.display = 'none';
+  document.getElementById('q18').style.display = 'block';
+  
+ 
+}  
+
+
+function hideStuff18bisno() {
+  var crent = 0;
+
+  
+    document.getElementById('loyer').style.display = 'none';
+    document.getElementById('noloyer').style.display = 'none';
+    document.getElementById('pension').style.display = 'block';
+  document.getElementById('nopension').style.display = 'block';
+  
+  tabSimulation.push(crent);
+  
+  document.getElementById('q18bis').style.display = "none";
+  document.getElementById('q19bis').style.display = 'block';
+  
+ 
+}  
 
 
 function hideStuff18() {
@@ -482,30 +586,113 @@ function hideStuff18() {
 
   if(crent){
   document.getElementById('36').style.display = 'none';
-  document.getElementById('37').style.display = 'block';
+  document.getElementById('pension').style.display = 'block';
+  document.getElementById('nopension').style.display = 'block';
   
   tabSimulation.push(crent);
 
   document.getElementById('q18').style.display = "none";
-  document.getElementById('q19').style.display = 'block';
+  document.getElementById('q19bis').style.display = 'block';
   } else{
     alert("Veuillez remplir le champs");
   }
  
 } 
 
+
+
+function hideStuff19bis() {
+  
+
+  
+  document.getElementById('pension').style.display = 'none';
+  document.getElementById('nopension').style.display = 'none';
+  document.getElementById('37').style.display = 'block';
+  
+  
+  
+  document.getElementById('q19bis').style.display = 'none';
+  document.getElementById('q19').style.display = 'block';
+  
+ 
+}  
+
+
+function hideStuff19bisno() {
+  var alimony = 0;
+
+  
+    document.getElementById('pension').style.display = 'none';
+    document.getElementById('nopension').style.display = 'none';
+    document.getElementById('credits').style.display = 'block';
+    document.getElementById('nocredits').style.display = 'block';
+  
+  tabSimulation.push(alimony);
+  
+  document.getElementById('q19bis').style.display = "none";
+  document.getElementById('q20bis').style.display = 'block';
+  
+ 
+}  
+
+
+
+
+
 function hideStuff19() {
 
   document.getElementById('37').style.display = 'none';
-  document.getElementById('38').style.display = 'block';
+  document.getElementById('credits').style.display = 'block';
+    document.getElementById('nocredits').style.display = 'block';
   
   var alimony = document.getElementById('alimony').value;
   tabSimulation.push(alimony);
   
   document.getElementById('q19').style.display = "none";
-  document.getElementById('q20').style.display = 'block';
+  document.getElementById('q20bis').style.display = 'block';
   
 }   
+
+
+
+
+
+
+function hideStuff20bis() {
+  
+
+  
+  document.getElementById('credits').style.display = 'none';
+  document.getElementById('nocredits').style.display = 'none';
+  document.getElementById('38').style.display = 'block';
+  
+  
+  
+  document.getElementById('q20bis').style.display = 'none';
+  document.getElementById('q20').style.display = 'block';
+  
+ 
+}  
+
+
+function hideStuff20bisno() {
+  var alimony = 0;
+
+  
+    document.getElementById('credits').style.display = 'none';
+    document.getElementById('nocredits').style.display = 'none';
+    
+  
+  tabSimulation.push(alimony);
+  
+  document.getElementById('q20bis').style.display = "none";
+  
+  hideStuff20();
+  
+ 
+}  
+
+
 
 
 function hideStuff20() {
