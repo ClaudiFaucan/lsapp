@@ -713,7 +713,7 @@
         
     
         
-        <a href="#" onclick="hideStuff9();">
+        <a href="#" onclick="hideStuff9();" id="clickcity">
         <img class="checkedbutton" src="{{ URL::asset('ico/checked.png') }}">
         
         </a>
@@ -1750,7 +1750,7 @@
     document.getElementById('q20').style.display = 'none';
     
             
-    window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+    window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();document.getElementById('clickcity').click();}}},true);
     window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='number'){e.preventDefault();
         console.log(e.target.id);
         switch (e.target.id){
