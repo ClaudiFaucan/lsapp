@@ -637,6 +637,7 @@ pre code {
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  width: 70%;
 }
 
 .no-gutters {
@@ -4390,9 +4391,9 @@ tbody.collapse.show {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5rem 1rem;
-  -webkit-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
    
 }
 

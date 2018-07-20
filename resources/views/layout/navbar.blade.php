@@ -22,7 +22,7 @@ a:hover {
    
     
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="tel:0535379090">05 35 37 90 90</a></li>
+          <li><a id="cell" href="tel:0535379090">05 35 37 90 90</a></li>
       </ul>
     
  

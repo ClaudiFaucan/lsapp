@@ -19,6 +19,11 @@
 
 <style>
 
+    #intercom-container .intercom-launcher-frame {
+   
+    left: 20px;
+    }
+
     .h2, h2 {
     font-size: 29px;
     }
@@ -159,7 +164,7 @@
     body {
    background-image: url("{{ URL::asset('ico/backgroundpart1.png') }}");
    background-color: #f7f7f7; 
-
+    text-align: center;
    background-repeat: no-repeat;
     background-size:  100%;
     margin-top: 5%;
@@ -188,19 +193,30 @@
     }
     .question{
         
-        text-align: center;
+        
         color: white;
         font-size: 2.75em;
-    
+        text-align: left !important;
        
         
     
     }
 
+    @media screen and (max-width: 640px) {
+     .row {
+       width: 115%
+        }
+    }
 
-
-
-
+    #cell{
+        font-size: 20px;
+    }
+    @media screen and (max-width: 316px) {
+     #cell {
+        font-size: 10px;
+        }
+    }
+   
 
 
 
@@ -216,8 +232,8 @@
 
 
     .centerInput{
-        margin-top: 20%;
-    margin-left: 30%;
+        margin-top: 5%;
+    margin-left: 5%;
     }
 
     html {
@@ -234,6 +250,7 @@
     h1 {
     font-size: 28px;
     margin-bottom: 2.5%;
+    line-height: 1.6;
     }
 
     input,
@@ -428,7 +445,16 @@
     border-radius: 15px;
     text-align: center;
 }
-
+@media screen and (max-width: 450px) {
+     .boxInput {
+        width: 300px;
+        }
+    }
+@media screen and (max-width: 335px) {
+     .boxInput {
+        width: 200px;
+        }
+    }
 ::placeholder { 
     color: #292929;
     opacity: 0.3;
@@ -448,7 +474,7 @@
     </div>
 
     <div class="row ">
-        <div class="column colcentered"></div>
+         
         <div id="1" class="column colcentered">
             <a href="#"  onclick="hideStuff('Demande de Renseignements');">
             <img class="icochoice" src="{{ URL::asset('ico/information.png') }}"> 
@@ -460,10 +486,10 @@
             <img class="icochoice" src="{{ URL::asset('ico/contract.png') }}"> 
             </a>
         </div>
-        <div class="column colcentered"></div>
+         
     </div>
     <div class="row">
-            <div class="column colcentered"></div>
+             
         <div id="3" class="column colcentered">
             <a href="#"  onclick="hideStuff('Act Signé');">
             <img class="icochoice" src="{{ URL::asset('ico/stamp.png') }}"> 
@@ -475,7 +501,7 @@
             <img class="icochoice" src="{{ URL::asset('ico/search.png') }}"> 
             </a>
         </div>
-        <div class="column colcentered"></div>
+         
 
 
     </div>
@@ -485,7 +511,7 @@
        <h1> Il s'agit...</h1>
     </div>
 <div class="row">
-        <div class="column colcentered"></div>
+         
     <div id="5" class="column colcentered">
         
         <a href="#" onclick="hideStuff2('Maison');">
@@ -498,10 +524,10 @@
         <img class="icochoice" src="{{ URL::asset('ico/home.png') }}"> 
         </a>
     </div>
-    <div class="column colcentered"></div>
+     
 </div>
 <div class="row">
-        <div class="column colcentered"></div>
+         
     <div id="7" class="column colcentered">
         <a href="#" onclick="hideStuff3('Terrain');">
         <img class="icochoice" src="{{ URL::asset('ico/office.png') }}"> 
@@ -513,7 +539,7 @@
         <img class="icochoice" src="{{ URL::asset('ico/farm.png') }}"> 
         </a>
     </div>
-    <div class="column colcentered"></div>
+     
     <script type="text/javascript">
             document.getElementById('5').style.display = 'none';
             document.getElementById('6').style.display = 'none';
@@ -530,7 +556,7 @@
     </div>
 
 <div class="row">
-        <div class="column colcentered"></div>
+         
     <div id="9" class="column colcentered">
         
         <a href="#" onclick="hideStuff4('Ancien');">
@@ -551,7 +577,7 @@
         </a>
     </div>
 
-    <div class="column colcentered"></div>
+     
     <script type="text/javascript">
             document.getElementById('9').style.display = 'none';
             document.getElementById('10').style.display = 'none';
@@ -567,7 +593,7 @@
         <h1  > Vous devez...</h1>
     </div>
 <div class="row">
-        <div class="column colcentered"></div>
+         
     <div id="12" class="column colcentered">
             
         <a href="#" onclick="hideStuff5('avec travaux');">
@@ -580,7 +606,7 @@
         <img class="icochoice" src="{{ URL::asset('ico/eco-house.png') }}"> 
         </a>
     </div>
-    <div class="column colcentered"></div>
+     
 
    
     <script type="text/javascript">
@@ -599,7 +625,7 @@
         <h1> Ce bien sera votre...</h1>
     </div>
 <div class="row">
-        <div class="column colcentered"></div>
+         
     <div id="14" class="column colcentered">
         
         <a href="#" onclick="hideStuff61('R Principale');">
@@ -618,7 +644,7 @@
         <img class="icochoice" src="{{ URL::asset('ico/rent.png') }}"> 
         </a>
     </div>
-    <div class="column colcentered"></div>
+     
    
     <script type="text/javascript">
             document.getElementById('14').style.display = 'none';
@@ -636,7 +662,7 @@
         <h1> Qui sera...</h1>
     </div>
 <div class="row">
-        <div class="column colcentered"></div>
+         
     <div id="17" class="column colcentered">
             
         <a href="#" onclick="hideStuff7('nue');">
@@ -649,7 +675,7 @@
         <img class="icochoice" src="{{ URL::asset('ico/room.png') }}"> 
         </a>
     </div>
-    <div class="column colcentered"></div>
+     
    
     <script type="text/javascript">
             document.getElementById('17').style.display = 'none';
@@ -744,7 +770,7 @@
    
     <div id="21" class="column colcentered centerInput">
         <form>
-            <input id="price" type="number" name="name" class="boxInput"  required autocomplete="off" />
+            <input id="price" type="number" name="name" class="boxInput"  required autocomplete="off" placeholder="Ex : 100 000€" />
             
             
         </form>    
@@ -774,7 +800,7 @@
     </div>
 
 <div class="row">
-        <div class="column colcentered"></div>
+         
     <div id="22" class="column colcentered">
         
         <a href="#" onclick="hideStuff10seul('seul');">
@@ -787,7 +813,7 @@
         <img class="icochoice" src="{{ URL::asset('ico/group.png') }}"> 
         </a>
     </div>
-    <div class="column colcentered"></div>
+     
    
     <script type="text/javascript">
             document.getElementById('23').style.display = 'none';
@@ -811,7 +837,7 @@
     
     <div id="24" class="column colcentered centerInput">
             <form>
-                    <input id="personalcontribution" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                    <input id="personalcontribution" type="number" name="name" class="boxInput"  required autocomplete="off" placeholder="Ex : 10 000€"/>
                     
                     
             </form> 
@@ -844,7 +870,7 @@
     <div id="24duo" class="column colcentered centerInput">
 
             <form>
-                    <input id="duopc" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                    <input id="duopc" type="number" name="name" class="boxInput"  required autocomplete="off" placeholder="Ex : 10 000€" />
                     
                     
             </form> 
@@ -873,7 +899,7 @@
 <div class="row">
 
 
-    <div class="column colcentered"></div>
+     
    <div id="25" class="column colcentered">
        
        <a href="#" onclick="hideStuff13prive('privé');">
@@ -886,11 +912,11 @@
        <img class="icochoice" src="{{ URL::asset('ico/public.png') }}"> 
        </a>
    </div>
-   <div class="column colcentered"></div>
+    
 </div>
 
 <div class="row">
-        <div class="column colcentered"></div>
+         
    <div id="27" class="column colcentered">
        <a href="#" onclick="hideStuff13('liberal');">
        <img class="icochoice" src="{{ URL::asset('ico/liberal.png') }}"> 
@@ -902,7 +928,7 @@
        <img class="icochoice" src="{{ URL::asset('ico/autrechoix.png') }}"> 
        </a>
    </div>
-   <div class="column colcentered"></div>
+    
   
    <script type="text/javascript">
            document.getElementById('25').style.display = 'none';
@@ -923,7 +949,7 @@
 
 
 <div class="row">
-        <div class="column colcentered"></div>
+         
    <div id="29" class="column colcentered">
         
        <a href="#" onclick="hideStuff14('cdi');">
@@ -936,10 +962,10 @@
        <img class="icochoice" src="{{ URL::asset('ico/cdd.png') }}"> 
        </a>
    </div>
-   <div class="column colcentered"></div>
+    
 </div>
 <div class="row">
-        <div class="column colcentered"></div>
+         
    <div id="31" class="column colcentered">
        <a href="#" onclick="hideStuff14('interim');">
        <img class="icochoice" src="{{ URL::asset('ico/interim.png') }}"> 
@@ -951,7 +977,7 @@
        <img class="icochoice" src="{{ URL::asset('ico/autre.png') }}"> 
        </a>
    </div>
-   <div class="column colcentered"></div>
+    
   
    <script type="text/javascript">
             document.getElementById('29').style.display = 'none';
@@ -975,7 +1001,7 @@
         
    <div id="33" class="column colcentered centerInput">
         <form>
-                <input id="income" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                <input id="income" type="number" name="name" class="boxInput"  required autocomplete="off" placeholder="Ex : 1 500€"/>
                 
                 
         </form> 
@@ -1017,7 +1043,7 @@
 <div class="row">
 
 
-<div class="column colcentered"></div>
+ 
 <div id="25duo" class="column colcentered">
    
    <a href="#" onclick="hideStuff13priveduo('privé');">
@@ -1030,11 +1056,11 @@
    <img class="icochoice" src="{{ URL::asset('ico/public.png') }}"> 
    </a>
 </div>
-<div class="column colcentered"></div>
+ 
 </div>
 
 <div class="row">
-    <div class="column colcentered"></div>
+     
 <div id="27duo" class="column colcentered">
    <a href="#" onclick="hideStuff13duo('liberal');">
    <img class="icochoice" src="{{ URL::asset('ico/liberal.png') }}"> 
@@ -1046,7 +1072,7 @@
    <img class="icochoice" src="{{ URL::asset('ico/autrechoix.png') }}"> 
    </a>
 </div>
-<div class="column colcentered"></div>
+ 
 
 <script type="text/javascript">
        document.getElementById('25duo').style.display = 'none';
@@ -1067,7 +1093,7 @@
 
 
 <div class="row">
-    <div class="column colcentered"></div>
+     
 <div id="29duo" class="column colcentered">
     
    <a href="#" onclick="hideStuff14duo('cdi');">
@@ -1080,10 +1106,10 @@
    <img class="icochoice" src="{{ URL::asset('ico/cdd.png') }}"> 
    </a>
 </div>
-<div class="column colcentered"></div>
+ 
 </div>
 <div class="row">
-    <div class="column colcentered"></div>
+     
 <div id="31duo" class="column colcentered">
    <a href="#" onclick="hideStuff14duo('interim');">
    <img class="icochoice" src="{{ URL::asset('ico/interim.png') }}"> 
@@ -1095,7 +1121,7 @@
    <img class="icochoice" src="{{ URL::asset('ico/autre.png') }}"> 
    </a>
 </div>
-<div class="column colcentered"></div>
+ 
 
 <script type="text/javascript">
         document.getElementById('29duo').style.display = 'none';
@@ -1119,7 +1145,7 @@
     
 <div id="33duo" class="column colcentered centerInput">
     <form>
-            <input id="incomeDuo" type="number" name="name" class="boxInput"  required autocomplete="off" />
+            <input id="incomeDuo" type="number" name="name" class="boxInput"  required autocomplete="off" placeholder="Ex : 1 500€"/>
             
             
     </form> 
@@ -1161,7 +1187,7 @@
     <h1 > Percevez-vous des revenus additionnels ? </h1>
 </div>
 <div class="row">
-    <div class="column colcentered"></div>
+     
 <div id="revenuadd" class="column colcentered">
         
     <a href="#" onclick="hideStuff16bis();">
@@ -1174,7 +1200,7 @@
     <img class="icochoice" src="{{ URL::asset('ico/norevenuadd.png') }}"> 
     </a>
 </div>
-<div class="column colcentered"></div>
+ 
 
 
 <script type="text/javascript">
@@ -1200,7 +1226,7 @@
         
    <div id="34" class="column colcentered centerInput">
         <form>
-                <input id="addincomes" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                <input id="addincomes" type="number" name="name" class="boxInput"  required autocomplete="off" placeholder="Ex : 400€"/>
                 
                 
         </form> 
@@ -1231,7 +1257,7 @@
     <h1 > Percevez-vous des primes annuelles ?</h1>
 </div>
 <div class="row">
-    <div class="column colcentered"></div>
+     
 <div id="primes" class="column colcentered">
         
     <a href="#" onclick="hideStuff17bis();">
@@ -1244,7 +1270,7 @@
     <img class="icochoice" src="{{ URL::asset('ico/noprimes.png') }}"> 
     </a>
 </div>
-<div class="column colcentered"></div>
+ 
 
 
 <script type="text/javascript">
@@ -1271,7 +1297,7 @@
         
    <div id="35" class="column colcentered centerInput">
         <form>
-                <input id="bonus" type="number" name="name" class="boxInput" required autocomplete="off" />
+                <input id="bonus" type="number" name="name" class="boxInput" required autocomplete="off" placeholder="Ex : 200€"/>
                 
                 
         </form> 
@@ -1301,7 +1327,7 @@
     <h1 > Payez-vous un loyer mensuel ?</h1>
 </div>
 <div class="row">
-    <div class="column colcentered"></div>
+     
 <div id="loyer" class="column colcentered">
         
     <a href="#" onclick="hideStuff18bis();">
@@ -1314,7 +1340,7 @@
     <img class="icochoice" src="{{ URL::asset('ico/noloyer.png') }}"> 
     </a>
 </div>
-<div class="column colcentered"></div>
+ 
 
 
 <script type="text/javascript">
@@ -1339,7 +1365,7 @@
         
    <div id="36" class="column colcentered centerInput">
         <form>
-                <input id="currentrent" type="number" name="name" class="boxInput" required autocomplete="off" />
+                <input id="currentrent" type="number" name="name" class="boxInput" required autocomplete="off" placeholder="Ex : 700€" />
                 
                 
         </form> 
@@ -1371,7 +1397,7 @@
     <h1 > Versez-vous une pension alimentaire ?</h1>
 </div>
 <div class="row">
-    <div class="column colcentered"></div>
+     
 <div id="pension" class="column colcentered">
         
     <a href="#" onclick="hideStuff19bis();">
@@ -1384,7 +1410,7 @@
     <img class="icochoice" src="{{ URL::asset('ico/nopension.png') }}"> 
     </a>
 </div>
-<div class="column colcentered"></div>
+ 
 
 
 <script type="text/javascript">
@@ -1411,7 +1437,7 @@
         
    <div id="37" class="column colcentered centerInput">
         <form>
-                <input id="alimony" type="number" name="name" class="boxInput"  required autocomplete="off" />
+                <input id="alimony" type="number" name="name" class="boxInput"  required autocomplete="off" placeholder="Ex : 300€" />
                 
                 
         </form> 
@@ -1441,7 +1467,7 @@
     <h1 > Le montant de vos crédits en cours s'élève à...</h1>
 </div>
 <div class="row">
-    <div class="column colcentered"></div>
+     
 <div id="credits" class="column colcentered">
         
     <a href="#" onclick="hideStuff20bis();">
@@ -1454,7 +1480,7 @@
     <img class="icochoice" src="{{ URL::asset('ico/nocredits.png') }}"> 
     </a>
 </div>
-<div class="column colcentered"></div>
+ 
 
 
 <script type="text/javascript">
@@ -1538,7 +1564,7 @@
                     <br>
                     <h1>Notre meilleur taux</h1>
                     <h1 class="h1" id="taux"> </h1>
-                    <div class="row">
+                    <div class="rowing">
                         <div class="column colcentered"><h3>Mensualité <span id="MensualiteSpan"> </span></h3>  </div>
                         <div class="column colcentered"><h3>Coût total intérêt <span id="totalInterestSpan"> </span></h3> </div>
                     </div>
@@ -1553,7 +1579,7 @@
                     <h1 class="h1" id="tauxNational"> </h1>
                     
                     
-                    <div class="row">
+                    <div class="rowing">
                         <div class="column colcentered"><h3>Mensualité <span id="MensualiteNationalSpan"> </span></h3>  </div>
                         <div class="column colcentered"><h3>Coût total intérêt <span id="totalInterestNationalSpan"> </span></h3> </div>
                     </div>
