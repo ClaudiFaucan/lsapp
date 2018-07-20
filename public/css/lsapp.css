@@ -50,6 +50,22 @@
     border-radius: 35px; 
     margin-left: 10%; 
   }
+  @media screen and (max-width: 450px) {
+    .left-half {
+      background-color: #ffffff;
+      float: center;
+      width: 100%;
+      box-shadow: 0 0px 100px #c6c6c6;
+      border-radius: 35px;
+       }
+   }
+  
+   @media screen and (max-width: 450px) {
+    .right-half {
+       display: none;
+       }
+   }
+  
 
   #taux, #MensualiteSpan,#textInputCapital2, #totalInterestSpan, #tauxNational, #MensualiteNationalSpan, #totalInterestNationalSpan, #economize {
     color: #fd1742;
